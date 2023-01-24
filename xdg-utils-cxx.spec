@@ -1,3 +1,5 @@
+%define _empty_manifest_terminate_build 0
+
 Name:		xdg-utils-cxx
 Version:	1.0.1
 Release:	1
