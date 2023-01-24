@@ -5,7 +5,7 @@ Summary:	Implementation of the FreeDesktop specifications to be used in C++ proj
 Group:		Development/C++
 License:	MIT
 Url:		https://github.com/azubieta/xdg-utils-cxx
-Source0:	https://github.com/azubieta/xdg-utils-cxx/archive/v%{version}.tar.gz?/%{name}-%{version}.tar.gz
+Source0:	https://github.com/azubieta/xdg-utils-cxx/archive/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	cmake
 
 %description
@@ -26,7 +26,7 @@ depends on the standard c++ libraries (stdlib).
 
 %build
 %cmake
-%make
+%make_build
 
 %install
-%makeinstall_std -C build
+%make_install -C build
