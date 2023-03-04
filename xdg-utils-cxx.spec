@@ -24,6 +24,7 @@ depends on the standard c++ libraries (stdlib).
 %package -n %{libname}
 Summary:        Shared library for %{name}
 Provides:       xdg-utils-cxx
+Obsoletes:      xdg-utils-cxx < %{EVRD}
 
 %description -n %{libname}
 Library for implementation of the FreeDesktop specifications to be used in C++ projects
