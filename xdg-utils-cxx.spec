@@ -1,5 +1,8 @@
 %define _empty_manifest_terminate_build 0
 
+%define libname %mklibname xdg-utils-cxx %{api} %{major}
+%define devname %mklibname -d xdg-utils-cxx %{api}
+
 Name:		xdg-utils-cxx
 Version:	1.0.1
 Release:	3
@@ -18,10 +21,31 @@ This project was started to fulfill the need of a reliable implementations
 of such standards in the AppImage project. It is totally standalone and only 
 depends on the standard c++ libraries (stdlib).
 
-%files
+%package -n %{libname}
+Summary:        Shared library for %{name}
+Provides:       xdg-utils-cxx
+
+%description -n %{libname}
+Library for implementation of the FreeDesktop specifications to be used in C++ projects
+
+%files -n %{libname}
+%{_libdir}/libXdgUtilsBaseDir.so.1.0.1
+%{_libdir}/libXdgUtilsDesktopEntry.so.1.0.1
+
+%package -n %{devname}
+Summary:        Development files for %{name}
+Requires:	%{libname} = %{version}-%{release}
+Privides:       xdg-utils-cxx-devel
+
+%description -n %{devname}
+Development files for implementation of the FreeDesktop specifications to be used in C++ projects
+
+%files -n %{devname}
 %{_includedir}/XdgUtils
-#{_libdir}/XdgUtils
+%{_libdir}/libXdgUtilsBaseDir.so
+%{_libdir}/libXdgUtilsDesktopEntry.so
 %{_libdir}/cmake/XdgUtils
+
 
 #------------------------------------------------------------------
 
