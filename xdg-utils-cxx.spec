@@ -1,7 +1,7 @@
 %define _empty_manifest_terminate_build 0
 
-%define libname %mklibname xdg-utils-cxx %{api} %{major}
-%define devname %mklibname -d xdg-utils-cxx %{api}
+%define libname %mklibname xdg-utils-cxx
+%define devname %mklibname -d xdg-utils-cxx
 
 Name:		xdg-utils-cxx
 Version:	1.0.1
