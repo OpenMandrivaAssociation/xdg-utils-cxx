@@ -2,12 +2,14 @@
 
 Name:		xdg-utils-cxx
 Version:	1.0.1
-Release:	2
+Release:	3
 Summary:	Implementation of the FreeDesktop specifications to be used in C++ projects
 Group:		Development/C++
 License:	MIT
 Url:		https://github.com/azubieta/xdg-utils-cxx
 Source0:	https://github.com/azubieta/xdg-utils-cxx/archive/v%{version}/%{name}-%{version}.tar.gz
+Patch0:   fix_so_version.patch
+Patch1:   fix_install_path.patch
 BuildRequires:	cmake
 
 %description
@@ -27,7 +29,9 @@ depends on the standard c++ libraries (stdlib).
 %autosetup -p1
 
 %build
-%cmake -DXDG_UTILS_SHARED=ON
+%cmake \
+        -DXDG_UTILS_SHARED=ON \
+        -DXDG_UTILS_TESTS=OFF
 %make_build
 
 %install
