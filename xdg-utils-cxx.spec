@@ -35,7 +35,7 @@ Library for implementation of the FreeDesktop specifications to be used in C++ p
 %package -n %{devname}
 Summary:        Development files for %{name}
 Requires:	%{libname} = %{version}-%{release}
-Privides:       xdg-utils-cxx-devel
+Provides:       xdg-utils-cxx-devel
 
 %description -n %{devname}
 Development files for implementation of the FreeDesktop specifications to be used in C++ projects
