@@ -20,7 +20,7 @@ depends on the standard c++ libraries (stdlib).
 
 %files
 %{_includedir}/XdgUtils
-%{_libdir}/XdgUtils
+#{_libdir}/XdgUtils
 %{_libdir}/cmake/XdgUtils
 
 #------------------------------------------------------------------
