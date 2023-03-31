@@ -5,7 +5,7 @@
 
 Name:		xdg-utils-cxx
 Version:	1.0.1
-Release:	3
+Release:	4
 Summary:	Implementation of the FreeDesktop specifications to be used in C++ projects
 Group:		Development/C++
 License:	MIT
